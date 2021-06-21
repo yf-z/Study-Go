@@ -5,7 +5,7 @@ package main
 import (
 	"fmt"
 	"flag"
-	"./chap2Excer"
+	"chap2Excer"
 )
 
 var prob = flag.Int("p", 1, "Select the number of the exercises.")
