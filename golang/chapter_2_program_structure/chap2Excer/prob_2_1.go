@@ -16,9 +16,9 @@ func cToK(c Celsius) Kelvin {return Kelvin(c+ZeroK)}
 func kToF(k Kelvin) Fahrenheit {return cToF(kToC)}
 func fToK(f Fahrenheit) Kelvin {return cToK(fToC)}
 
-// func solve_2_1() {
-// 	fmt.Println("Convert K to C: ", kToC(Kelvin(1)))
-// 	fmt.Println("Convert C to K: ", cToK(Celsius(1)))
-// 	fmt.Println("Convert K to F: ", kToF(Kelvin(1)))
-// 	fmt.Println("Convert F to K: ", kToC(Fahrenheit(1)))
-// }
+func solve_2_1() {
+	fmt.Println("Convert K to C: ", kToC(Kelvin(1)))
+	fmt.Println("Convert C to K: ", cToK(Celsius(1)))
+	fmt.Println("Convert K to F: ", kToF(Kelvin(1)))
+	fmt.Println("Convert F to K: ", kToC(Fahrenheit(1)))
+}
