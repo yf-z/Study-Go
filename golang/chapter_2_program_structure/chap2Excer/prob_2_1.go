@@ -3,22 +3,22 @@ package chap2Excer
 
 import "fmt"
 
-func (c Celsius) String() string {return fmt.Sprintf("%v°C", c)}
-func (f Fahrenheit) String() string {return fmt.Sprintf("%v°F", f)}
-func (k Kelvin) String() string {return fmt.Sprintf("%v°K", k)}
+func (c Celsius) String() string {return fmt.Sprintf("%g°C", c)}
+func (f Fahrenheit) String() string {return fmt.Sprintf("%g°F", f)}
+func (k Kelvin) String() string {return fmt.Sprintf("%g°K", k)}
 
 func cToF(c Celsius) Fahrenheit {return Fahrenheit(c*9/5+32)}
 func fToC(f Fahrenheit) Celsius {return Celsius((f-32)*5/9)}
 
 func kToC(k Kelvin) Celsius {return Celsius(k-ZeroK)}
-func cToK(c Celsius) Kelvin {return Kelvin(c+ZeroK)}
+func cToK(c Celsius) Kelvin {return Kelvin(c+Celsius(ZeroK))}
 
-func kToF(k Kelvin) Fahrenheit {return cToF(kToC)}
-func fToK(f Fahrenheit) Kelvin {return cToK(fToC)}
+func kToF(k Kelvin) Fahrenheit {return cToF(kToC(k))}
+func fToK(f Fahrenheit) Kelvin {return cToK(fToC(f))}
 
 func solve_2_1() {
 	fmt.Println("Convert K to C: ", kToC(Kelvin(1)))
 	fmt.Println("Convert C to K: ", cToK(Celsius(1)))
 	fmt.Println("Convert K to F: ", kToF(Kelvin(1)))
-	fmt.Println("Convert F to K: ", kToC(Fahrenheit(1)))
+	fmt.Println("Convert F to K: ", fToK(Fahrenheit(1)))
 }
