@@ -1,6 +1,8 @@
 // exercise 2.1 page 42
 package chap2Excer
 
+import "fmt"
+
 func (c Celsius) String() string {return fmt.Sprintf("%v°C", c)}
 func (f Fahrenheit) String() string {return fmt.Sprintf("%v°F", f)}
 func (k Kelvin) String() string {return fmt.Sprintf("%v°K", k)}
