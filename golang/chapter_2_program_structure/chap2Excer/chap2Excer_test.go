@@ -1,7 +1,10 @@
 package chap2Excer
 
-import "testing"
+import (
+	"testing"
+	"fmt"
+)
 
 func TestChap2Excer(t *testing.T) {
-	Solve_2_1()
+	fmt.Println(PopCount(3294823947))
 }

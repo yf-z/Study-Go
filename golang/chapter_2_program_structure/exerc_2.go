@@ -12,6 +12,7 @@ import (
 var prob = flag.Int("p", 1, "Select the number of the exercises.")
 var conv = flag.String("c", "", "Select from KC, FC, FK, FM, KP")
 var val = flag.Float64("v", 0.0, "Type in the value")
+var val3 = flag.Uint64("v3", 0, "Type in an uint64 value")
 
 func main() {
 	flag.Parse()
@@ -38,6 +39,8 @@ func main() {
 		default:
 			fmt.Println("Invalid conversion type.")
 		}
+	case 3:
+		chap2Excer.Compare(*val3)
 	default:
 		fmt.Println("Invalid exercise number.")
 	}
