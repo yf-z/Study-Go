@@ -41,6 +41,10 @@ func main() {
 		}
 	case 3:
 		chap2Excer.Compare(*val3)
+	case 4:
+		chap2Excer.Compare3(*val3)
+	case 5:
+		chap2Excer.Compare5(*val3)
 	default:
 		fmt.Println("Invalid exercise number.")
 	}
